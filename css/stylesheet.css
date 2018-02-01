@@ -1,3 +1,25 @@
-h1 {
-  color: green;
+body {
+	font-family: Gill Sans MT;
+}
+
+.dropdown-button {
+	font-size: 20px;
+}
+
+#home-icon {
+	padding-left: .48em;
+	margin-left: .2em;
+}
+
+.navbar-element {
+	font-size: 20px;
+}
+
+#center-titleblock {
+	border-radius: 10%;
+}
+
+#title {
+  //color: ;
+
 }
