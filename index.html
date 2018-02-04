@@ -2,9 +2,14 @@
 <html>
 	<!-- I see you snooping here! -->
 	<head>
+		<!-- CSS imports -->
 		<link href="css/stylesheet.css" rel="stylesheet" type="text/css">
 		<link href="css/materialize.min.css" rel="stylesheet" type="text/css" media="screen,projection">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!-- JS imports --> 
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="js/panic.js"></script>
+		<script type="text/javascript" src="js/materialize.min.js"></script>
 		<title>Welcome!</title>
 	</head>
 
@@ -17,10 +22,11 @@
 		</ul>
 
 		<!-- Navbar -->
-		<div class="navbar-wrapper">
-			<div id="navbar" class="navbar-fixed blue-grey">
-				<nav class="blue-grey lighten-2">
+		<div id="navbar" class="navbar-fixed blue-grey">
+			<nav class="blue-grey lighten-2">
+				<div class="navbar-wrapper">
 					<a href="http://www.sampaniccia.me/" id="home-icon" class="brand-logo left hoverable"><i class="large material-icons">home</i></a>
+					<a href="#" data-activates="mobile-demo" class="right button-collapse"><i class="material-icons">menu</i></a>
 					<ul id="nav-mobile" class="right hide-on-med-and-down">
 						<li><a class="navbar-element" href="http://www.google.com">About Me</a></li>
 						<li><a class="dropdown-button" data-beloworigin="true" href="#" data-activates="projects-dropdown">Projects<i class="material-icons right">arrow_drop_down</i></a></li>
@@ -29,6 +35,21 @@
 				</div>
 			</nav>
 		</div>
+
+		<!-- Projects Dropdown Menu -->
+		<ul id="projects-dropdown-mobile" class="dropdown-content">
+			<li><a href="#!">one</a></li>
+			<li><a href="#!">two</a></li>
+		</ul>
+
+		<!-- Side Navbar for Mobile -->
+		<ul id="mobile-demo" class="side-nav">
+			<li><a class="navbar-element" href="http://www.google.com">About Me</a></li>
+			<li><a class="dropdown-button-mobile" data-beloworigin="true" href="#" data-activates="projects-dropdown-mobile">Projects<i class="material-icons right">arrow_drop_down</i></a></li>
+			<li><a class="navbar-element" href="#">Kerr Hall Compositions</a></li>	
+		</ul>
+
+		<!-- idk yet -->
 		<div id="titleblock" class="container center-align"> 
 			<div id="above-titleblock"></div>
 			<div class="row">
@@ -39,10 +60,6 @@
 				<div class="col s4 m4 l4"></div>
 			</div>
 		</div>
-		<!-- JS imports --> 
-		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-		<script type="text/javascript" src="js/panic.js"></script>
-		<script type="text/javascript" src="js/materialize.min.js"></script>
 	</body>
 </html>
 
