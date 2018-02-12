@@ -1,8 +1,34 @@
+/* All CSS code by Sam Paniccia. Using Google Materialize Design API.  */
+
 body {
 	font-family: Gill Sans MT;
 }
 
 .dropdown-button {
+	font-size: 20px;
+}
+
+#wip-header {
+	margin-top: 6em;
+	margin-left: 3em;
+	margin-right: 3em;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	border-radius: 3em;
+}
+
+#wip-header-text {
+	font-size: 48px;
+}
+
+#wip-content {
+	margin-top: 4em;
+	margin-left: 5em;
+	margin-right: 5em;
+	border-radius: 3em;
+}
+
+#wip-content-text {
 	font-size: 20px;
 }
 
@@ -27,8 +53,4 @@ body {
 
 #right-content {
 	margin-right: 2em;
-}
-
-/*#titleblock {
-	height: 400em;
-}*/
+} 
