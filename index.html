@@ -1,6 +1,12 @@
+<!--  ~~~~~~~~~~~~~~~~~~~~~ TODO ~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+      <!--- Fix footer! Why is it not sticking to the bottom? -->
+      <!--- About Me margins are whack when resizing: pictures too big? -->
+
+
+
+<!-- All HTML by Sam Paniccia. Using Google Materialize Design API and JQuery. -->
 <!DOCTYPE html>
 <html>
-	<!-- All HTML by Sam Paniccia. Using Google Materialize Design API and JQuery. -->
 	<head>
 		<!-- CSS imports -->
 		<link href="css/stylesheet.css" rel="stylesheet" type="text/css">
@@ -12,6 +18,7 @@
 		<script type="text/javascript" src="js/materialize.min.js"></script>
 		<title>Welcome!</title>
 	</head>
+
 
 	<!-- Body -->
 	<body class="grey lighten-4">
@@ -74,7 +81,7 @@
 				</div>
 			</div>
 
-			<!-- Front Screen: Large Screen -->
+			<!-- Front Screen: Large Screen -->	
 			<div id="front-content" class="center-align hide-on-med-and-down">
 				<div class="row">
 					<div id="intro-blurb" class="grey lighten-2 col s5 m5 l5 left">
@@ -95,13 +102,81 @@
 					free to take a look at my projects and hobbies by either scrolling down or using the tabs above!</p>
 				</div>
 				<div id="right-content-small" class="blue">
-					<img src="assets/images/test.jpg" class="hoverable"></i>
+					<img src="assets/images/test.jpg" class="hoverable">
 					<div class="green">That's me, on the right! (Well, not yet...)</div>
 				</div> 
 			</div>
+
+			<!-- About Me -->
+			<div id="about-me" class="center-align hide-on-med-and-down">
+				<div id="center-titleblock" class="center-text"> 
+					<div class="row subheader">  
+						<h2 id="about-me-header" class="col l6 offset-l3 grey lighten-3 subheader">About Me:</h2> 
+					</div>
+				</div>
+
+				<!-- Three rows, text and image in each -->
+				<div id="about-me-one" class="row valign-wrapper">
+					<div id="about-me-one-text" class="grey lighten-2 col l9 left">
+						<p class="flow-text">Major-related stuff here</p>
+					</div>
+					<div id="about-me-one-img" class="col l3 right">
+						<img src="assets/images/about-one.jpg" class="hoverable responsive-img">
+					</div>
+				</div>
+
+				<div id="about-me-two" class="row valign-wrapper">
+					<div id="about-me-two-img" class="col l3 right">
+						<img src="assets/images/about-two.jpg" class="hoverable responsive-img">
+					</div>
+					<div id="about-me-two-text" class="grey lighten-2 col l9 left">
+						<p class="flow-text">Music-related stuff here</p>
+					</div>
+				</div>
+
+				<div id="about-me-three" class="row valign-wrapper">
+					<div id="about-me-three-text" class="grey lighten-2 col l9 left">
+						<p class="flow-text">Hobby-related stuff here</p>
+					</div>
+					<div id="about-me-three-img" class="col l3 right">
+						<img src="assets/images/about-three.jpg" class="hoverable responsive-img">
+					</div>
+				</div>
+			</div>
+
+			<!-- WIP Content for Mobile -->
+			<div id="about-me-mobile" class="center-align hide-on-large-only">
+				<h1 class="center-text">Hi, phone/tablet user!</h1>
+				<div class="flow-text">
+					<p>I haven't yet finished the mobile version of this site. Please view on a computer to see what I'm up to!</p>
+				</div>
+			</div>
+
+			<!-- Projects -->
+			<div id="projects" class="center-align hide-on-med-and-down">
+				<div id="center-titleblock" class="center-text subheader">
+					<div class="row">
+						<h2 id="project-header" class="col l6 offset-l3 grey lighten-3 subheader">My Projects</h2>
+					</div>
+				</div>
+				
+			</div>
+
 		</div>
 
-
+		<!-- Footer: Display only when not wip --> 
+		<footer id="footer" class="page-footer blue-grey lighten-2">
+			<div class="container">
+				<div class="row">
+	            	<div class="col l6 s12">
+	            		<p class="white-text">© Copyright 2018 Sam Paniccia</p> 
+	          		</div>
+	          	<div class="col l4 offset-l2 s12">
+	            	<p class="white-text">jk i can't copyright anything</p>
+	          	</div>
+	        </div> 
+		</footer>
 	</body>
+
 </html>
 

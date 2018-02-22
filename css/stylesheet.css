@@ -42,8 +42,12 @@ body {
 	font-size: 20px;
 }
 
+#center-titleblock {
+	margin-bottom : 5em;
+}
+
 #front-content {
-	margin-top : 6em;
+	margin-bottom: 12em;
 }
 
 #intro-blurb {
@@ -54,3 +58,14 @@ body {
 #right-content {
 	margin-right: 2em;
 } 
+
+#about-me {
+	margin-left: 2em;
+	margin-right: 2em;
+	margin-bottom: 12em;
+}
+
+.subheader {
+	border-radius: 2em;
+}
+

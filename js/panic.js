@@ -1,8 +1,8 @@
-//All Javascript by Sam Paniccia (so much code!). Using Google Materialize Design API. 
+//All Javascript by Sam Paniccia (so much code smh). Using Google Materialize Design API. 
 
 
 //Should I show the work-in-progress screen, or should I show the real content? 
-var isBuild = true;
+var isBuild = false;
 
 $(document).ready(function(){
 	$('.dropdown-button').dropdown();
@@ -15,6 +15,7 @@ $(document).ready(function(){
 	if (isBuild) { 
 		//in build mode, display wip content
 		document.getElementById("true-wrap").className = "hide";
+		document.getElementById("footer").className += " hide";
 	} else { 
 		document.getElementById("wip-wrap").className = "hide";
 	}
