@@ -2,7 +2,7 @@
 
 
 //Should I show the work-in-progress screen, or should I show the real content? 
-var isBuild = true;
+var isBuild = false;
 
 $(document).ready(function(){
 	$('.dropdown-button').dropdown();

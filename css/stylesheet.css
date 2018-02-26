@@ -1,7 +1,16 @@
 /* All CSS code by Sam Paniccia. Using Google Materialize Design API.  */
 
+* {
+	//border: 1px solid red;
+}
+
 body {
 	font-family: Gill Sans MT;
+	margin-bottom: -10em;
+}
+
+#titleblock {
+	margin-top: 4em;
 }
 
 .dropdown-button {
@@ -47,7 +56,12 @@ body {
 }
 
 #front-content {
-	margin-bottom: 12em;
+	margin-bottom: 8em;
+}
+
+.jumpto {
+	margin-bottom: 2em;
+	visibility: hidden;
 }
 
 #intro-blurb {
@@ -57,15 +71,38 @@ body {
 
 #right-content {
 	margin-right: 2em;
+	font-size: 18px;
 } 
 
 #about-me {
 	margin-left: 2em;
 	margin-right: 2em;
-	margin-bottom: 12em;
+	margin-bottom: 8em;
+}
+
+.about-me-text {
+	border-radius: 1em;
 }
 
 .subheader {
 	border-radius: 2em;
 }
 
+#projects-git {
+	margin-bottom: 2em;
+}
+
+.collection-item {
+	font-size: 26px;
+}
+
+#projects-list {
+	margin-bottom: 8em;
+}
+
+#khc-content {
+	font-size: 20px;
+	margin-bottom: 4em;
+	border-radius: 2em;
+	padding: 1em;
+}

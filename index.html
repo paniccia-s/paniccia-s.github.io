@@ -1,8 +1,10 @@
 <!--  ~~~~~~~~~~~~~~~~~~~~~ TODO ~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
       <!--- Fix footer! Why is it not sticking to the bottom? -->
-      <!--- About Me margins are whack when resizing: pictures too big? -->
+      <!--- Modals for each project -->
+      <!--- Redirect sampaniccia.me to www.sampaniccia.me -->
 
-
+<!-- ~~~~~~~~~~~~~~~~~~~~~CONCERNS~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	  <!--- jumptos -->
 
 <!-- All HTML by Sam Paniccia. Using Google Materialize Design API and JQuery. -->
 <!DOCTYPE html>
@@ -37,7 +39,7 @@
 
 
 		<!-- Wrapper for real site -->
-		<div id="true-wrap" class="">
+		<div id="true-wrap">
 			<!-- Navbar -->
 			<div id="navbar" class="navbar-fixed blue-grey">
 				<nav class="blue-grey lighten-2">
@@ -45,9 +47,9 @@
 						<a href="http://www.sampaniccia.me/" id="home-icon" class="brand-logo left hoverable"><i class="large material-icons">home</i></a>
 						<a href="#" data-activates="mobile-demo" class="right button-collapse"><i class="material-icons">menu</i></a>
 						<ul id="nav-mobile" class="right hide-on-med-and-down">
-							<li><a class="navbar-element" href="http://www.google.com">About Me</a></li>
+							<li><a class="navbar-element" href="#about-me-jumpto">About Me</a></li>
 							<li><a class="dropdown-button" data-beloworigin="true" href="#" data-activates="projects-dropdown">Projects<i class="material-icons right">arrow_drop_down</i></a></li>
-							<li><a class="navbar-element" href="#">Kerr Hall Compositions</a></li>	
+							<li><a class="navbar-element" href="#khc-jumpto">Kerr Hall Compositions</a></li>	
 						</ul>
 					</div>
 				</nav>
@@ -55,14 +57,19 @@
 
 			<!-- Projects Dropdown Menu -->
 			<ul id="projects-dropdown" class="dropdown-content">
-				<li><a href="#!">one</a></li>
-				<li><a href="#!">two</a></li>
+				<li><a href="#projects-jumpto">Overview</a></li> 
+				<li><a href="https://github.com/paniccia-s/darwins-playground">Darwin's Playground</a></li>
+				<li><a href="https://github.com/paniccia-s/haiku-generator">Haiku Generator</a></li>
+				<li><a href="https://github.com/paniccia-s/event-mo">EventMo</a></li>
+				<li><a href="https://github.com/paniccia-s/paniccia-s.github.io">Code for this website!</a></li>
 			</ul>
 
-			<!-- Projects Dropdown Menu -->
+			<!-- Projects Dropdown Menu for Mobile -->
 			<ul id="projects-dropdown-mobile" class="dropdown-content">
-				<li><a href="#!">One</a></li>
-				<li><a href="#!">two</a></li>
+				<li><a href="https://github.com/paniccia-s/darwins-playground">Darwin's Playground</a></li>
+				<li><a href="https://github.com/paniccia-s/haiku-generator">Haiku Generator</a></li>
+				<li><a href="https://github.com/paniccia-s/event-mo">EventMo</a></li>
+				<li><a href="https://github.com/paniccia-s/paniccia-s.github.io">Code for this website!</a></li>
 			</ul>
 
 			<!-- Side Navbar for Mobile -->
@@ -75,7 +82,7 @@
 			<!-- Title Block: Present on all sizes -->
 			<div id="titleblock" class="container center-align">  
 				<div class="row"> 
-					<div id="center-titleblock" class="flow-text center-text">
+					<div class="center-titleblock flow-text center-text">
 						<h1 id="title" class="center-align ">Hi!</h1>
 					</div> 
 				</div>
@@ -83,14 +90,14 @@
 
 			<!-- Front Screen: Large Screen -->	
 			<div id="front-content" class="center-align hide-on-med-and-down">
-				<div class="row">
+				<div class="row valign-wrapper">
 					<div id="intro-blurb" class="grey lighten-2 col s5 m5 l5 left">
 						<p class="flow-text">Welcome! I'm Sam Paniccia, and I am a second-year student at Northeatern University studying Computer Engineering/Computer Science and minoring in Music. Feel 
 						free to take a look at my projects and hobbies by either scrolling down or using the tabs above!</p>
 					</div>
-					<div id="right-content" class="blue col s5 m5 l5 right">
+					<div id="right-content" class="col s5 m5 l5 right flow-text">
 						<img src="assets/images/tamb.png" class="hoverable"></i>
-						<div class="green">TEMPORARY IMAGE</div>
+						<div>I'm the outrageous-looking one with the tambourine on the right :)</div>
 					</div>
 				</div>
 			</div>
@@ -107,18 +114,21 @@
 				</div> 
 			</div>
 
+			<!-- Navigation Div: "About Me" header tab jumps here to avoid cutting off the About Me header. -->
+			<div id="about-me-jumpto" class="jumpto">this is a hackish workaround... how do i get around this?</div>
+
 			<!-- About Me -->
 			<div id="about-me" class="center-align hide-on-med-and-down">
-				<div id="center-titleblock" class="center-text"> 
+				<div class="center-titleblock center-text"> 
 					<div class="row subheader">  
-						<h2 id="about-me-header" class="col l6 offset-l3 grey lighten-3 subheader">About Me:</h2> 
+						<h2 id="about-me-header" class="col l6 offset-l3 grey lighten-3 subheader">About Me</h2> 
 					</div>
 				</div>
 
 				<!-- Three rows, text and image in each -->
 				<div id="about-me-one" class="row valign-wrapper">
-					<div id="about-me-one-text" class="grey lighten-2 col l9 left">
-						<p class="flow-text">Major-related stuff here</p>
+					<div id="about-me-one-text" class="about-me-text grey lighten-2 col l9 left">
+						<p class="flow-text">I knew I was going to be an engineer all my life. I've always had a strong interest in the world around me, and I love solving problems and applying what I've learned to the real world. In my senior year of high school I also discovered a love for designing and implementing programs, and voilà, the CE/CS major was born. </p>
 					</div>
 					<div id="about-me-one-img" class="col l3 right">
 						<img src="assets/images/about-one.jpg" class="hoverable responsive-img">
@@ -129,14 +139,14 @@
 					<div id="about-me-two-img" class="col l3 right">
 						<img src="assets/images/about-two.jpg" class="hoverable responsive-img">
 					</div>
-					<div id="about-me-two-text" class="grey lighten-2 col l9 left">
-						<p class="flow-text">Music-related stuff here</p>
+					<div id="about-me-two-text" class="about-me-text grey lighten-2 col l9 left">
+						<p class="flow-text">When I'm not in class or doing computery things, I spend most of my time either playing or listening to music. I've been a musician all my life, and music is essential to me. I've been an avid percussionist for almost 12 years, and I've performed everywhere from my high school auditorium to Main Street at Disney World in Florida. In my senior year of high school I performed a 8-minute long marimba duet with a close friend of mine, and this fostered my love for pitched instruments. In the following two years I've self-taught guitar, bass guitar, piano, and flute, learning from and jamming with my roommates and friends (in my five-person apartment, we have 7 guitars, one ukulele, and one piano!). And all the while, I've continued to study and perform (and compose for!) percussion. I'm thrilled to have found such a rich musical environment at school!</p>
 					</div>
 				</div>
 
 				<div id="about-me-three" class="row valign-wrapper">
-					<div id="about-me-three-text" class="grey lighten-2 col l9 left">
-						<p class="flow-text">Hobby-related stuff here</p>
+					<div id="about-me-three-text" class="about-me-text grey lighten-2 col l9 left">
+						<p class="flow-text">Aside from performing, I also love listening to all types of music. My favorite genres are classic rock, blues, and jazz, but I enjoy pretty much anything: some of the less standard music I enjoy ranges from Organ Freeman (no, not Morgan, but Organ) to Mongolian throat-singing music (it provides really good working ambiance). My all-time favorite groups are Pink Floyd, the Vince Guaraldi Trio (the Charlie Brown music guys!), and Vulfpeck. </p>
 					</div>
 					<div id="about-me-three-img" class="col l3 right">
 						<img src="assets/images/about-three.jpg" class="hoverable responsive-img">
@@ -152,36 +162,103 @@
 				</div>
 			</div>
 
+			<!-- Navigation Div: "Projects" header tab jumps here to avoid cutting off the My Projects header. -->
+			<div id="projects-jumpto" class="jumpto">this is a hackish workaround... how do i get around this?</div>
+
 			<!-- Projects -->
-			<div id="projects" class="center-align hide-on-med-and-down">
-				<div id="center-titleblock" class="center-text subheader">
-					<div class="row">
+			<div id="projects" class="hide-on-med-and-down">
+				<div class="center-titleblock center-text subheader">
+					<div class="row center-align">
 						<h2 id="project-header" class="col l6 offset-l3 grey lighten-3 subheader">My Projects</h2>
 					</div>
+				</div>
 
-				<div id="projects-one" class="flow-text">
+				<div id="projects-git" class="flow-text center-align">
 					<h4 class="center-text">My projects are most easily viewable at my 
-					<a href="https://github.com/paniccia-s"> GitHub repo</a>:</h4> 
+					<a href="https://github.com/paniccia-s"> GitHub repo</a>.</h4> 
 				</div>
-
+ 
+ 				<div id="projects-list" class="container">
+					<ul class="collection">
+						<li class="collection-header center-align"><h4>What have I been up to?</h4></li>
+						<li class="collection-item">
+							<div>Darwin's Playground (a game, in <b>Java</b>)<a href="?" class="secondary-content">
+								<i class="material-icons">arrow_forward</i></a></div></li>
+						<li class="collection-item">
+							<div>Haiku Generator (scripting in <b>Python</b>)<a href="?" class="secondary-content">
+								<i class="material-icons">arrow_forward</i></a></div></li>
+						<li class="collection-item">
+							<div>EventMo (an <b>Android app</b>)<a href="?" class="secondary-content">
+								<i class="material-icons">arrow_forward</i></a></div></li>
+						<li class="collection-item">
+							<div>This website! (custom <b>HTML/CSS</b>, a bit of <b>JS</b>)<a href="?" class="secondary-content">
+								<i class="material-icons">arrow_forward</i></a></div></li>
+					</ul> 
 				</div>
-
 			</div>
-
 		</div>
 
-		<!-- Footer: Display only when not wip --> 
+		<!-- Navigation Div: "Kerr Hall Compositions" header tab jumps here to avoid cutting off the KHC header. -->
+			<div id="khc-jumpto" class="jumpto">this is a hackish workaround... how do i get around this?</div>
+
+		<!-- Kerr Hall Compositions -->
+		<div id="khc" class="hide-on-med-and-down">
+			<div class="center-titleblock center-text subheader">
+				<div class="row center-align">
+					<h2 id="project-header" class="col l6 offset-l3 grey lighten-3 subheader">Kerr Hall Compositions</h2>
+				</div>
+
+				<div id="khc-intro" class="container center-align flow-text">
+					<div class="row valign-wrapper">
+						<div id="khc-intro-text" class="col l5 offset-l1">
+							<h4>Kerr Hall Compositions is an independent composing organization co-founded by myself and 
+							<a href="https://joshuaberlin.me/">Joshua Berlin</a>.</h4>
+						</div>
+						<div id="khc-intro-pic" class="col l5 offset-l1 right">
+							<img src="assets/images/khc.jpg" class="hoverable responsive-img circle">
+						</div>
+					</div> 
+				</div>
+
+				<div id="khc-content" class="container center-align flow-text grey lighten-3">
+					<p>At the beginning of the spring semester of 2017, the conductor of the Northeastern Wind Ensemble held a chamber concert, and the percussion section had nothing to play. With the concert just a few weeks away, we had to find a piece to play.
+					<br><br>But we found nothing. All of the pieces we found for five players were either boring, cliche, or just not good.
+					<br><br><b>So we decided to write something of our own.</b> In February of 2017, fellow Wind Ensemble percussionist Joshua Berlin and I decided to compose a piece for percussion quintet to perform at the concert. I'd never composed before, but Josh convinced me to give it a try. 
+					<br><br><b>We're still composing today.</b> 
+					<br><br>If you're interested in our work, please visit the Kerr Hall Compositions <a href="http://www.kerrhallcompositions.com/">website</a>.</p>
+				</div>
+			</div>
+		</div>
+
+
+ 		<footer class="page-footer blue-grey lighten-2">
+         	<div class="footer-copyright">
+            	<div class="container">
+					<div class="row">
+	            		<div class="col l6 s12">
+	            			<p class="white-text">© Copyright 2018 Sam Paniccia</p> 
+	          			</div>
+	          			<div class="col l4 offset-l2 s12">
+	            			<p class="white-text">jk i can't copyright anything</p>
+	          			</div>
+	        		</div> 
+	        	</div>
+            </div>
+        </footer>
+
+		<!-- Footer: Display only when not wip  
 		<footer id="footer" class="page-footer blue-grey lighten-2">
 			<div class="container">
 				<div class="row">
 	            	<div class="col l6 s12">
 	            		<p class="white-text">© Copyright 2018 Sam Paniccia</p> 
 	          		</div>
-	          	<div class="col l4 offset-l2 s12">
-	            	<p class="white-text">jk i can't copyright anything</p>
-	          	</div>
-	        </div> 
-		</footer>
+	          		<div class="col l4 offset-l2 s12">
+	            		<p class="white-text">jk i can't copyright anything</p>
+	          		</div>
+	        	</div> 
+	        </div>
+		</footer> 
 	</body>
 
 </html>
