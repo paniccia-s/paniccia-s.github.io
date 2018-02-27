@@ -2,14 +2,21 @@
 
 
 //Should I show the work-in-progress screen, or should I show the real content? 
-var isBuild = true;
+var isBuild = false;
 
 $(document).ready(function(){
+	//Dropdowns
 	$('.dropdown-button').dropdown();
 	$('.dropdown-button-mobile').dropdown();
 	$('.button-collapse').sideNav({
 		edge: 'right'
 	}); 
+
+	//Modals
+	$('#modal-darwin').modal();
+	$('#modal-haiku').modal();
+	$('#modal-event').modal();
+	$('#modal-site').modal();
 
 	//Determine which content to show/hide by isBuild flag
 	if (isBuild) { 
