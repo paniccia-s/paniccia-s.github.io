@@ -17,6 +17,7 @@ $(document).ready(function(){
 	$('#modal-haiku').modal();
 	$('#modal-event').modal();
 	$('#modal-site').modal();
+	$('#modal-drum').modal();
 
 	//Determine which content to show/hide by isBuild flag
 	if (isBuild) { 
