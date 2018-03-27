@@ -28,3 +28,7 @@ $(document).ready(function(){
 		document.getElementById("wip-wrap").className = "hide";
 	}
 });
+
+function closeModals() {
+	$('#modal-drum').modal('close'); 	
+}
