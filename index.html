@@ -6,6 +6,9 @@
 <!-- ~~~~~~~~~~~~~~~~~~~~~CONCERNS~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 	  <!--- jumptos -->
 
+<!-- Hello there, HTML inspector :O -->
+
+
 <!-- All HTML by Sam Paniccia. Using Google Materialize Design API and JQuery. -->
 <!DOCTYPE html>
 <html>
@@ -28,7 +31,7 @@
 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 		<script type="text/javascript" src="js/panic.js"></script>
 		<script type="text/javascript" src="js/materialize.min.js"></script>
-		<title>Welcome!</title>
+		<title>Sam Paniccia</title>
 	</head>
 
 
@@ -46,9 +49,7 @@
 			</div>
 		</div>
 
-
-		
-
+ 
 		<!-- Wrapper for real site -->
 		<div id="true-wrap">
 			<!-- Navbar -->
@@ -68,6 +69,38 @@
 
 			<!-- Dropdowns, Modals, etc -->
 
+			<!-- Modal for C♭ -->
+			<div id="modal-cb" class="modal modal-fixed-footer blue-grey lighten-3">
+				<div class="modal-content center-align">
+					<h4>C♭</h4>
+					<p><b>C♭</b> is a from-scratch, imperative, static-typed, pseudo-class-based programming language with original syntax and semantics, created by myself and Michael Hackett. Named after our favorite musical note and adhering to the single-letter naming tradition of many popular languages, it aims to provide a lower-level approach to class semantics through a unique, semi-struct semi-class code structure, called a <b>pod</b> (they were originally meant to contain just Plain Old Data; thus, the name 'POD'). All members and methods must belong to a pod, and pods may interact with one another in a variety of ways to exchange information and data. C♭ is currently compiled to C through a python compiler.
+					<br><br><b>Language:</b> Compiled <b>with</b> Python; compiled <b>to</b> C
+					<br><br><b>Started:</b> January, 2019
+					<br><br><b>Why?</b> The compilation process is an interesting and unique field in which neither Michael nor myself have had any academic exposure. We thought that designing a language and jumping right into the difficult compilation design procedures would be a fun and enlightening process. So far, it definitely has been. 
+					<br><br><b>Progress:</b> We have studied a lot of compiler design resources and have designed the syntax of C♭. Some progress into the first steps of the compiler has been made.
+				</div>
+				<div class="modal-footer blue-grey lighten-3">
+					<a href="#!" class="modal-action modal-close btn-flat">Okay!</a>
+					<a href="#!" class="modal-action modal-close btn-flat">Don't you mean B?</a>
+				</div>
+			</div>
+
+			<!-- Modal for LED Array -->
+			<div id="modal-led" class="modal modal-fixed-footer blue-grey lighten-3">
+				<div class="modal-content center-align">
+					<h4>LED Array</h4>
+					<p>I moved to a new apartment in the fall of 2018, and I felt the place needed a bit more character. Everyone knows that nothing adds character to a room like a responsive LED display that changes color and brightness based on what music is playing over the central speaker, so I decided to try to design one myself. The array is a ~15 foot-long LED strip bordering our deck door. Music is received through a spliced aux cord, filtered and matched to the Teensy's ADC range, and analyzed for intensity and other musical qualities. Based on these factors, a pattern is developed for each LED on the strip. Preset color patterns are also available if there is no music playing</p>
+					<br><br><b>Language:</b> C++, Arduino Platform
+					<br><br><b>Started:</b> October, 2018
+					<br><br><b>Why?</b> This was my first experience with independent circuit design, and it was an excellent exercize in real-world circuit debugging and structure. Plus, the lights are cool.
+					<br><br><b>Progress:</b> Version 2 of the filtering/amplitude adjusting circuit is complete, but not yet tested. I have all necessary hardware. Design of the software is in the works.
+				</div>
+				<div class="modal-footer blue-grey lighten-3">
+					<a href="#!" class="modal-action modal-close btn-flat">Pretty rad!</a>
+					<a href="#!" class="modal-action modal-close btn-flat">Whoa!</a>
+				</div>
+			</div>
+
 			<!-- Modal for Drum Pad -->
 			<div id="modal-drum" class="modal modal-fixed-footer blue-grey lighten-3">
 				<div class="modal-content center-align">
@@ -76,12 +109,13 @@
 					<h5><br><br>A sneak-peek of what we're working on...</h5>
 					<img src="assets/images/drumpad.png" class="hoverable responsive-img"> -->
 					<p>The <b>MIDI Drum Pad</b> is a collaborative project aimed to aid music composers in writing percussion parts on music-writing software like Logic and Garage Band. The final product will contain a fully-responsive playing surface that plays and feels like a normal practice pad. Every hit will be detected by the pad, processed by the on-board Teensy LC microprocessor, and sent through a USB port to the host computer as a MIDI signal. The channel and range of this outgoing signal can be selected through a series of buttons and a rotary encoder on the top of the pad for ease of use. The board features a PCB and signal processing code of our own design.
-					<br><br><b>Language:</b> Arduino
+					<br><br><b>Language:</b> C++, Arduino platform
 					<br><br><b>Started:</b> March, 2018
 					<br><br><b>Why?</b> My friend/composing partner, 
-					<a href="https://joshuaberlin.me/">Josh</a>, and I were running into problems when composing percussion parts for our pieces. It was too hard to accurately record the rhythmically-intense parts without playing them on a drum. This project aims to remedy our problems by allowing us to record the parts exactly how we would play them on a real drum. 
+					<a href="https://joshuaberlin.me/">Josh</a>, and I were running into problems when composing percussion parts for our pieces. It was too hard to accurately record the rhythmically-intense parts without playing them on a drum. This project aims to remedy our problems by allowing us to record the parts exactly how we would play them on a real drum. </p>
 					<br><b>More about composing 
-						<a href="#khc-jumpto" onclick="closeModals()">here</a>.</b></p>
+						<a href="#khc-jumpto" onclick="closeModals()">here</a>.</b>
+					<br><br><b>Progress:</b> A prototype is complete!
 				</div>
 				<div class="modal-footer blue-grey lighten-3">
 					<a href="#!" class="modal-action modal-close btn-flat">Pretty rad!</a>
@@ -96,8 +130,9 @@
 					<p><b>Darwin's Playground</b> is an evolutionary simulation in which organisms are mutated, bred, and placed into a world where their survival is based off of how well they were genetically engineered.
 					<br><br><b>Language:</b> Java
 					<br><br><b>Started:</b> October, 2017
-					<br><br><b>Why?</b> I really like biology, and I really like programming. This project is a fun and challenging way to combine the two. Additionally, I wanted to sharpen my skills in Java, as I hadn't had much practice lately. 
+					<br><br><b>Why?</b> I really like biology, and I really like programming. This project is a fun and challenging way to combine the two. Additionally, I wanted to sharpen my skills in Java, as I was a bit rusty in the language when I began the project. 
 					<br><br><b>What was the inspiration?</b> I was doodling in class one day and the pieces just sort of came together in my head. I said, "hey, wouldn't it be cool if I could create these organisms that live and die by their genetic code?". And then I remembered that yes, I probably indeed could do that. And here we are. 
+					<br><br><b>Progress:</b> The game is functional, with one level and one organism so far. Data storage and retrieval needs a lot of work, as do the in-game survival calculation methods.
 				</div>
 				<div class="modal-footer blue-grey lighten-3">
 					<a href="#!" class="modal-action modal-close btn-flat">Awesome</a>
@@ -106,7 +141,7 @@
 			</div>
 
 			<!-- Modal for Haiku Generator -->
-			<div id="modal-haiku" class="modal modal-fixed-footer blue-grey lighten-3">
+			<!-- <div id="modal-haiku" class="modal modal-fixed-footer blue-grey lighten-3">
 				<div class="modal-content center-align">
 					<h4>Haiku Generator</h4>
 					<i>I enjoy haikus</i><br>
@@ -124,10 +159,10 @@
 					<a href="#!" class="modal-action modal-close btn-flat">Cultured!</a>
 					<a href="#!" class="modal-action modal-close btn-flat">So many syllables!</a>
 				</div>
-			</div>
+			</div> -->
 
 			<!-- Modal for EventMo -->
-			<div id="modal-event" class="modal modal-fixed-footer blue-grey lighten-3">
+			<!-- <div id="modal-event" class="modal modal-fixed-footer blue-grey lighten-3">
 				<div class="modal-content center-align">
 					<h4>EventMo</h4>
 					<p><b>EventMo</b> is an event-planning Android app that facilitates communication and payment between host and guest. It includes a general discussion board where users can post messages to everyone, an announcements tab where the host can pin important announcements for all to see, and a balance section for calculating who owes what to whom (a detail that can get mighty messy as event size increases!)
@@ -140,7 +175,7 @@
 					<a href="#!" class="modal-action modal-close btn-flat">Wow!</a>
 					<a href="#!" class="modal-action modal-close btn-flat"><i class="material-icons">android</i></a>
 				</div>
-			</div>
+			</div> -->
 
 			<!-- Modal for this website -->
 			<div id="modal-site" class="modal modal-fixed-footer blue-grey lighten-3">
@@ -149,7 +184,8 @@
 					<p>The website is rather self-explanatory: you're here reading this, after all :)
 					<br><br><b>Language:</b> HTML, CSS, little bit of JS
 					<br><br><b>Started:</b> January, 2018
-					<br><br><b>Why?</b> Lots of my friends have personal sites and I figured I could use the practice in HTML/CSS. 
+					<br><br><b>Why?</b> I wanted a personal site and I figured I could use the practice in HTML/CSS. 
+					<br><br><b>Progress:</b> Up-To-Date as of 8 Jan 2019.
 					</p>
 				</div>
 				<div class="modal-footer blue-grey lighten-3">
@@ -158,13 +194,14 @@
 				</div>
 			</div>
 
+
+
 			<!-- Projects Dropdown Menu -->
 			<ul id="projects-dropdown" class="dropdown-content">
 				<li><a href="#projects-jumpto">Overview</a></li> 
-				<li><a href="https://github.com/paniccia-s/darwins-playground">Darwin's Playground</a></li>
-				<li><a href="https://github.com/paniccia-s/haiku-generator">Haiku Generator</a></li>
-				<li><a href="https://github.com/paniccia-s/event-mo">EventMo</a></li>
-				<li><a href="https://github.com/paniccia-s/paniccia-s.github.io">Code for this website!</a></li>
+				<li><a href="https://github.com/hackett123/Cb">C♭ Repo</a></li>
+				<li><a href="https://github.com/paniccia-s/darwins-playground">Darwin's Playground Repo</a></li>  
+				<li><a href="https://github.com/paniccia-s/paniccia-s.github.io">Repo for this website!</a></li>
 			</ul>
 
 			<!-- Projects Dropdown Menu for Mobile -->
@@ -188,7 +225,7 @@
 			<div id="titleblock" class="container center-align">  
 				<div class="row"> 
 					<div class="center-titleblock flow-text center-text">
-						<h1 id="title" class="center-align ">Hi!</h1>
+						<h1 id="title" class="center-align ">Hi there!</h1>
 					</div> 
 				</div>
 			</div>
@@ -197,12 +234,11 @@
 			<div id="front-content" class="center-align hide-on-med-and-down">
 				<div class="row valign-wrapper">
 					<div id="intro-blurb" class="grey lighten-2 col s5 m5 l5 left">
-						<p class="flow-text">Welcome! I'm Sam Paniccia, and I am a second-year student at Northeastern University studying Computer Engineering/Computer Science and minoring in Music. Feel 
-						free to take a look at my projects and hobbies by either scrolling down or using the tabs above!</p>
+						<p class="flow-text">Welcome! I'm Sam Paniccia, and I am a third-year student at Northeastern University studying Computer Engineering/Computer Science and minoring in Music. Feel free to take a look at my projects and hobbies by either scrolling down or using the tabs above!</p>
 					</div>
 					<div id="right-content" class="col s5 m5 l5 right flow-text">
 						<img src="assets/images/tamb.png" class="hoverable"></i>
-						<div>I'm the outrageous-looking one with the tambourine on the right :)</div>
+						<div>I'm the enthusiastic-looking one with the tambourine on the right :)</div>
 					</div>
 				</div>
 			</div>
@@ -210,7 +246,7 @@
 			<!-- Front Screen: Small Screen --> 
 			<div id="front-content" class="container center-align hide-on-large-only"> 
 				<div id="intro-blurb-small" class="grey lighten-2">
-					<p class="flow-text">Welcome! I'm Sam Paniccia, and I am a second-year student at Northeastern University studying Computer Engineering/Computer Science and minoring in Music. Feel 
+					<p class="flow-text">Welcome! I'm Sam Paniccia, and I am a third-year student at Northeastern University studying Computer Engineering/Computer Science and minoring in Music. Feel 
 					free to take a look at my projects and hobbies by either scrolling down or using the tabs above!</p>
 				</div>
 				<div id="right-content-small" class="blue">
@@ -233,7 +269,7 @@
 				<!-- Three rows, text and image in each -->
 				<div id="about-me-one" class="row valign-wrapper">
 					<div id="about-me-one-text" class="about-me-text grey lighten-2 col l9 left">
-						<p class="flow-text">I knew I was going to be an engineer all my life. I've always had a strong interest in the world around me, and I love solving problems and applying what I've learned to the real world. In my senior year of high school, I also discovered a love for designing and implementing programs, and voilà, the CE/CS major was born. Ever since then, I've always been tinkering away with personal projects on both the hardware and software side. Some of the more recent and major ones are below and on my GitHub page!
+						<p class="flow-text">I knew I was going to be an engineer all my life. I've always had a strong interest in the world around me, and I love solving problems and applying what I've learned to the real world. In my senior year of high school, I also discovered a love for designing and implementing programs, and voilà, a CE/CS major was born. Ever since then, I've always been tinkering away with personal projects on both the hardware and software side. Some of the more recent and major ones are below and on my GitHub page!
 						<br><br>Here's me holding a stuffed animal sloth. His name is Kurtis.</p>
 					</div>
 					<div id="about-me-one-img" class="col l3 right">
@@ -247,13 +283,13 @@
 						<p>A Solidworks rendering of the MIDI drum pad I co-created (see the My Projects section below for more!)</p>
 					</div>
 					<div id="about-me-two-text" class="about-me-text grey lighten-2 col l9 left">
-						<p class="flow-text">When I'm not in class or doing computery things, I spend most of my time either playing or listening to music. I've been a musician all my life, and music is essential to me. I've been an avid percussionist for almost 12 years, and I've performed everywhere from my high school auditorium to Main Street at Disney World in Florida. In my senior year of high school, I performed an 8-minute long marimba duet with a close friend of mine, and this fostered my love for pitched instruments. In the following two years I've self-taught guitar, bass guitar, piano, and flute, learning from and jamming with my roommates and friends (in my five-person apartment, we have 7 guitars, one ukulele, and one piano!). And all the while, I've continued to study and perform (and compose for!) percussion. I'm thrilled to have found such a rich musical environment at school!</p>
+						<p class="flow-text">When I'm not in class or doing computery things, I spend most of my time either playing or listening to music. I've been a musician all my life, and music is essential to me. I've been an avid percussionist for over 15 years, and I've performed everywhere from my high school auditorium to Main Street at Disney World in Florida. In my senior year of high school, I performed an 8-minute long marimba duet with a close friend of mine, and this fostered my love for pitched instruments. In the following two years I've self-taught guitar, bass guitar, and piano, learning from and jamming with my roommates and friends. And all the while, I've continued to study and perform (and compose for) percussion. I'm thrilled to have found such a rich musical environment at school!</p>
 					</div>
 				</div>
 
 				<div id="about-me-three" class="row valign-wrapper">
 					<div id="about-me-three-text" class="about-me-text grey lighten-2 col l9 left">
-						<p class="flow-text">Aside from performing, I also love listening to all types of music. My favorite genres are classic rock, blues, and jazz, but I enjoy pretty much anything: some of the less standard music I enjoy ranges from Organ Freeman (no, not Morgan, but Organ) to Mongolian throat-singing music (it provides really good working ambiance). My all-time favorite groups are Pink Floyd, the Vince Guaraldi Trio (the Charlie Brown music guys!), and Vulfpeck. </p>
+						<p class="flow-text">Aside from performing, I also love listening to all types of music. My favorite genres are classic rock, blues, funk, and jazz, but I enjoy pretty much anything: some of the less standard music I enjoy ranges from Organ Freeman (no, not Morgan, but Organ) to Mongolian throat-singing music (it provides a really good working ambiance). My all-time favorite groups are Pink Floyd, the Vince Guaraldi Trio (the Charlie Brown music guys), and Vulfpeck. </p>
 					</div>
 					<div id="about-me-three-img" class="col l3 right">
 						<img src="assets/images/about-three.jpg" class="hoverable responsive-img">
@@ -272,6 +308,52 @@
 			<!-- Navigation Div: "Projects" header tab jumps here to avoid cutting off the My Projects header. -->
 			<div id="projects-jumpto" class="jumpto">this is a hackish workaround... how do i get around this?</div>
 
+			<!-- Coops -->
+			<div id="coops" class="hide-on-med-and-down">
+				<div class="center-titleblock center-text subheader">
+					<div class="row center-align">
+						<h2 id="coops-header" class="col l6 offset-l3 grey lighten-3 subheader">Previous Coops</h2>
+					</div>
+				</div>
+
+				<div id="coop-list" class="flow-text center-align">
+					<h4 id="coop-doble-header" class="center-text">Doble Engineering- June-December, 2018</h4>
+					<h4 id="coop-doble-header" class="center-text">Part-Time January, 2019-Present</h4>
+					<div id="coop-doble" class="row">  
+						<div id="coop-doble-items" class="left-align coop-doble-text col l4 grey lighten-3">
+							<h5><b>Skills Learned:</b></h5>
+							<ul style="font-size: 1.25rem">
+								<li>- Circuit Design</li>
+								<li>- PCB Design</li>
+								<li>- Script Development, Optimization, Integration</li>
+								<li>- Test Suite Development</li>
+								<li>- GUI and Front-End Development</li>
+								<li>- Data Serialization and JSON Usage</li>
+							</ul>
+							<h5><b>Languages Used:</b></h5>
+							<ul style="font-size: 1.25rem">
+								<li>- C#</li>
+								<li>- Python</li>
+								<li>- C++</li>
+							</ul>
+							<h5><b>Technical Resources Used:</b></h5>
+							<ul style="font-size: 1.25rem">
+								<li>- Google Flatbuffer Serialization</li>
+								<li>- Selenium web browser automation (in Python)</li>
+								<li>- Asynchonous operation and data transfer (primarily in C#)</li>
+								<li>- EAGLE and easyeda PCB design software</li>
+							</ul>
+						</div>
+						<div id="coop-doble-desc" class="coop-doble-text col l8 grey lighten-3">
+							<h5><b>Position Held:</b> Hardware/Embedded Engineer</h5>
+							<p>I was based on the Computer Hardware team at Doble, and many of my tasks regarded one of Doble's products. I got to work hand-in-hand with the other engineers on the team, learning about real-world circuit design where the imperfections of the real world play a significant roll in how products are designed. In addition, I worked heavily on improving and expanding several internal tools, both front-end and back-end. <br><br>I also spent time on the embedded software team, where I helped design and implement some lower-level procedures involving message and data serialization and transmission. Being able to apply my knowledge of both hardware and software in one unifying project was really rewarding!
+							<br><br>Finally, I spent some time working on automation test scripts with the SQA department. This experience taught me how to write cohesive, comprehensive tests that cover all edge cases and ensure that a product is working correctly.
+							</p>
+						</div> 
+					</div>
+				</div>
+			</div>
+
 			<!-- Projects -->
 			<div id="projects" class="hide-on-med-and-down">
 				<div class="center-titleblock center-text subheader">
@@ -281,25 +363,33 @@
 				</div>
 
 				<div id="projects-git" class="flow-text center-align">
-					<h4 class="center-text">My projects are most easily viewable at my 
-					<a href="https://github.com/paniccia-s"> GitHub repo</a>.</h4> 
+					<h4 class="center-text">My programming projects are most easily viewable on my 
+					<a href="https://github.com/paniccia-s"> GitHub profile</a>.</h4> 
 				</div>
  				
  				<div id="projects-list" class="container">
 					<ul class="collection">
 						<li class="collection-header center-align"><h4>What have I been up to?</h4></li>
+						<li class="collection-item"> 
+							<div>C♭, an original programming language compiled with <b>Python</b><a href="#modal-cb"
+								class="secondary-content modal-trigger">
+								<i class="material-icons">arrow_forward</i></a></div></li>
+						<li class="collection-item">
+							<div>Music-Responsive LED Array, colored by a <b>Teensy</b><a href="#modal-led" 
+								class="secondary-content modal-trigger">
+								<i class="material-icons">arrow_forward</i></a></div></li>
 						<li class="collection-item">
 							<div>MIDI Drum Pad (a from-scratch, <b>Teensy</b>-powered drum pad!)<a href="#modal-drum" class="secondary-content modal-trigger">
 								<i class="material-icons">arrow_forward</i></a></div></li>
 						<li class="collection-item">
 							<div>Darwin's Playground (a game, in <b>Java</b>)<a href="#modal-darwin" class="secondary-content modal-trigger">
 								<i class="material-icons">arrow_forward</i></a></div></li>
-						<li class="collection-item">
+						<!-- <li class="collection-item">
 							<div>Haiku Generator (scripting in <b>Python</b>)<a href="#modal-haiku" class="secondary-content modal-trigger">
 								<i class="material-icons">arrow_forward</i></a></div></li>
 						<li class="collection-item">
 							<div>EventMo (an <b>Android app</b>)<a href="#modal-event" class="secondary-content modal-trigger">
-								<i class="material-icons">arrow_forward</i></a></div></li>
+								<i class="material-icons">arrow_forward</i></a></div></li> -->
 						<li class="collection-item">
 							<div>This website! (custom <b>HTML/CSS</b>, a bit of <b>JS</b>)<a href="#modal-site" class="secondary-content modal-trigger">
 								<i class="material-icons">arrow_forward</i></a></div></li>

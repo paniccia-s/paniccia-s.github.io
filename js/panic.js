@@ -13,6 +13,8 @@ $(document).ready(function(){
 	}); 
 
 	//Modals
+	$('#modal-cb').modal();
+	$('#modal-led').modal();
 	$('#modal-darwin').modal();
 	$('#modal-haiku').modal();
 	$('#modal-event').modal();
