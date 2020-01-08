@@ -87,7 +87,6 @@ body {
 #coop-doble {
 	margin-left: 2em;
 	margin-right: 2em; 
-
 }
 
 .coop-doble-text {
@@ -126,7 +125,7 @@ body {
 	margin-bottom: 1em;
 }
 
-#coop-doble-header {
+.coop-doble-header {
 	margin-bottom: 1em;
 }
 

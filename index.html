@@ -101,13 +101,29 @@
 				</div>
 			</div>
 
+			<!-- Modal for Hexdungeon -->
+			<div id="modal-hexdungeon" class="modal modal-fixed-footer blue-grey lighten-3">
+				<div class="modal-content center-align">
+					<h4>Hexdungeon</h4>
+					<p>When I began my second coop, I did a deep dive into C++. I quickly learned that it is not a welcoming language for beginners. 
+					<br><br>In order to accelerate my understanding of the language, I decided to start a side project. This project is a roguelike (a dungeon-crawler) with a twist: while most roguelike games feature a map of four-sided tiles, my tiles would be hexagonal. It's a somewhat arbitrary difference, but it makes the game logic much more complicated.
+					<br><br>I have generally found that the best way for me to learn about languages and coding practices is through making silly games, and this is no exception. This time, however, I approached much more advanced topics than before, including map generation (aka graph traversal algorithms) and data-driven storage (so far, realized as singleton immutable tiles and a map array of tile pointers rather than a map array of new tile objects). The largest and most interesting challenge was in my game event loop, which I have designed myself. The purpose of my custom loop is to take advantage of the wasted time in between user interactions: in previous game attempts, I have used GUI packages to await asynchronous user events, and my program will sit idly until such an event arises. In this game, separate worker threads use the time in between events to precalculate data needed to progress the game to the next turn upon input (data such as map traversal patterns for entities, possible next moves and their effects, etc). The hope is to have this data ready by the time the user takes their turn to reduce the amount of time the game spends processing the move is as low as possible.
+					<br><br>This has proven quite ambitious. We'll see how it goes.</p>
+					<br><br><b>Language:</b> C++
+					<br><br><b>Started:</b> June, 2019
+					<br><br><b>Why?</b> I wanted the C++ knowledge to help me develop as an engineer. I also grew interested in the multi-threading challenge of a safe game loop, and solving that problem took way more time than I expected.
+					<br><br><b>Progress:</b> Basic map creation and traversal is implemented. The current version of the game loop is under test in an exterior project, but the idea is fully scoped out.
+				</div>
+				<div class="modal-footer blue-grey lighten-3">
+					<a href="#!" class="modal-action modal-close btn-flat">Neato!</a>
+					<a href="#!" class="modal-action modal-close btn-flat">Hexagons are a pain!</a>
+				</div>
+			</div>
+
 			<!-- Modal for Drum Pad -->
 			<div id="modal-drum" class="modal modal-fixed-footer blue-grey lighten-3">
 				<div class="modal-content center-align">
 					<h4>MIDI Drum Pad</h4>
-					<!-- <h3>This part of the site is a <b>Work in Progress</b>- I'll be done with it soon!</h3>
-					<h5><br><br>A sneak-peek of what we're working on...</h5>
-					<img src="assets/images/drumpad.png" class="hoverable responsive-img"> -->
 					<p>The <b>MIDI Drum Pad</b> is a collaborative project aimed to aid music composers in writing percussion parts on music-writing software like Logic and Garage Band. The final product will contain a fully-responsive playing surface that plays and feels like a normal practice pad. Every hit will be detected by the pad, processed by the on-board Teensy LC microprocessor, and sent through a USB port to the host computer as a MIDI signal. The channel and range of this outgoing signal can be selected through a series of buttons and a rotary encoder on the top of the pad for ease of use. The board features a PCB and signal processing code of our own design.
 					<br><br><b>Language:</b> C++, Arduino platform
 					<br><br><b>Started:</b> March, 2018
@@ -283,13 +299,13 @@
 						<p>A Solidworks rendering of the MIDI drum pad I co-created (see the My Projects section below for more!)</p>
 					</div>
 					<div id="about-me-two-text" class="about-me-text grey lighten-2 col l9 left">
-						<p class="flow-text">When I'm not in class or doing computery things, I spend most of my time either playing or listening to music. I've been a musician all my life, and music is essential to me. I've been an avid percussionist for over 15 years, and I've performed everywhere from my high school auditorium to Main Street at Disney World in Florida. In my senior year of high school, I performed an 8-minute long marimba duet with a close friend of mine, and this fostered my love for pitched instruments. In the following two years I've self-taught guitar, bass guitar, and piano, learning from and jamming with my roommates and friends. And all the while, I've continued to study and perform (and compose for) percussion. I'm thrilled to have found such a rich musical environment at school!</p>
+						<p class="flow-text">When I'm not in class or doing computery things, I spend most of my time either playing or listening to music. I've been a musician all my life, and music is essential to me. I've been an avid percussionist for over 15 years, and I've performed everywhere from my high school auditorium to Main Street at Disney World in Florida. In my senior year of high school, I performed an 8-minute long marimba duet with a close friend of mine, and this fostered my love for pitched instruments. In the following years I've self-taught guitar, bass guitar, and piano, learning from and jamming with my roommates and friends. And all the while, I've continued to study and perform (and compose for) percussion. I'm thrilled to have found such a rich musical environment at school!</p>
 					</div>
 				</div>
 
 				<div id="about-me-three" class="row valign-wrapper">
 					<div id="about-me-three-text" class="about-me-text grey lighten-2 col l9 left">
-						<p class="flow-text">Aside from performing, I also love listening to all types of music. My favorite genres are classic rock, blues, funk, and jazz, but I enjoy pretty much anything: some of the less standard music I enjoy ranges from Organ Freeman (no, not Morgan, but Organ) to Mongolian throat-singing music (it provides a really good working ambiance). My all-time favorite groups are Pink Floyd, the Vince Guaraldi Trio (the Charlie Brown music guys), and Vulfpeck. </p>
+						<p class="flow-text">Aside from performing, I also love listening to all types of music. My favorite genres are classic rock, blues, funk, and jazz, but I enjoy pretty much anything: some of the less standard music I enjoy ranges from Organ Freeman (no, not Morgan, but Organ) to Mongolian throat-singing music (it provides a really good working ambiance). My all-time favorite musicians and groups are Jacob Collier, Snarky Puppy, Vulfpeck, Vince Guaraldi, and Pink Floyd. </p>
 					</div>
 					<div id="about-me-three-img" class="col l3 right">
 						<img src="assets/images/about-three.jpg" class="hoverable responsive-img">
@@ -317,39 +333,84 @@
 				</div>
 
 				<div id="coop-list" class="flow-text center-align">
-					<h4 id="coop-doble-header" class="center-text">Doble Engineering- June-December, 2018</h4>
-					<h4 id="coop-doble-header" class="center-text">Part-Time January, 2019-Present</h4>
-					<div id="coop-doble" class="row">  
-						<div id="coop-doble-items" class="left-align coop-doble-text col l4 grey lighten-3">
-							<h5><b>Skills Learned:</b></h5>
-							<ul style="font-size: 1.25rem">
-								<li>- Circuit Design</li>
-								<li>- PCB Design</li>
-								<li>- Script Development, Optimization, Integration</li>
-								<li>- Test Suite Development</li>
-								<li>- GUI and Front-End Development</li>
-								<li>- Data Serialization and JSON Usage</li>
-							</ul>
-							<h5><b>Languages Used:</b></h5>
-							<ul style="font-size: 1.25rem">
-								<li>- C#</li>
-								<li>- Python</li>
-								<li>- C++</li>
-							</ul>
-							<h5><b>Technical Resources Used:</b></h5>
-							<ul style="font-size: 1.25rem">
-								<li>- Google Flatbuffer Serialization</li>
-								<li>- Selenium web browser automation (in Python)</li>
-								<li>- Asynchonous operation and data transfer (primarily in C#)</li>
-								<li>- EAGLE and easyeda PCB design software</li>
-							</ul>
+					<div id="coop-doble-2-wrapper">
+						<h4 class="coop-doble-header center-text">Doble Engineering - June-December, 2019</h4>
+						<div id="coop-doble" class="row">
+							<div id="coop-doble-desc" class="coop-doble-text col l8 grey lighten-3">
+								<h5><b>Position Held:</b> Hardware/Embedded Engineer</h5>
+								<p>For my second coop at Doble, I expanded upon my previous role on the Hardware team and worked much closer with the embedded firmware that the hardware ran. I continued to work on the same F-series product as in my previous coop and in my part-time work. Most of my time was spent architecting and implementing a sophisticated Remote Procedure Call (further expressed as RPC) interface that permitted outside applications to invoke function calls concerning particular hardware modules through the firmware messaging stack. Function invocations are delivered in the form of a Google Flatbuffer message; the firmware receives the serialized message, parses it into meaningful data, parameterizes any given parameters from arrays of bytes into C++ types, invokes the desired function, and returns any related data as another Flatbuffer message. Each message may contain an arbitrary number of function calls, and return values per function call are easily retrievable.
+								<br><br>The calls are typesafe and efficient: the platform outperforms a previous RPC implementation by hefty margins, especially as the number of calls per message increases. Any object representable in JSON is supported as either a function parameter or return value.
+								<br><br>In addition to the RPC capability, I also diagnosed and reworked a slowdown in inter-module communication through I<sup>2</sup>C, increasing throughput by 90%.
+								<br><br>Finally, I continued my internal tool development, working further with C# WPF to enhance the Windows applications that the firmware and hardware teams use to communicate with hardware.
+								</p>
+							</div>
+							<div id="coop-doble-items" class="left-align coop-doble-text col l4 grey lighten-3">
+								<h5><b>Skills Learned:</b></h5>
+								<ul style="font-size: 1.25rem">
+									<li>- Remote Procedure Calls: How they Work and How to Use Them</li>
+									<li>- Complex C++ Constructs:</li>
+									<li>
+										<div style="margin-left: 1em">
+											<ul style="font-size: 1.25rem">
+												<li>+ Thread Safety: Mutexes, Atomics, and Condition Variables</li>
+												<li>+ Exception Safety: <em>noexcept</em> and Exception-Free Promises</li>
+												<li>+ Dynamic Memory Management: Dumb and Smart Pointers</li>
+												<li>+ Language Semantics: Copy and Move</li>
+											</ul>
+										</div>
+									</li>
+									<li>- Dynamic Code Generation through Python (and <a href="https://pythonhosted.org/Cheetah/">Cheetah</a>)</li> 
+									<li>- Asynchronous Messaging Strategies</li>
+								</ul>
+								<h5><b>Languages Used:</b></h5>
+								<ul style="font-size: 1.25rem">
+									<li>- C++</li>
+									<li>- Python</li>
+									<li>- C#</li>
+								</ul>
+								<h5><b>Technical Resources Used:</b></h5>
+								<ul style="font-size: 1.25rem">
+									<li>- Google Flatbuffer Serialization</li>
+									<li>- Cheetah Python Template Engine</li>
+								</ul>
+							</div>
 						</div>
-						<div id="coop-doble-desc" class="coop-doble-text col l8 grey lighten-3">
-							<h5><b>Position Held:</b> Hardware/Embedded Engineer</h5>
-							<p>I was based on the Computer Hardware team at Doble, and many of my tasks regarded one of Doble's products. I got to work hand-in-hand with the other engineers on the team, learning about real-world circuit design where the imperfections of the real world play a significant roll in how products are designed. In addition, I worked heavily on improving and expanding several internal tools, both front-end and back-end. <br><br>I also spent time on the embedded software team, where I helped design and implement some lower-level procedures involving message and data serialization and transmission. Being able to apply my knowledge of both hardware and software in one unifying project was really rewarding!
-							<br><br>Finally, I spent some time working on automation test scripts with the SQA department. This experience taught me how to write cohesive, comprehensive tests that cover all edge cases and ensure that a product is working correctly.
-							</p>
-						</div> 
+					</div>
+					<div id="coop-doble-1-wrapper">
+						<h4 class="coop-doble-header center-text">Doble Engineering - June-December, 2018</h4>
+						<h5 class="coop-doble-header center-text">And Part-Time Employment while in Classes: January-June, 2019</h3>
+						<div id="coop-doble" class="row">  
+							<div id="coop-doble-items" class="left-align coop-doble-text col l4 grey lighten-3">
+								<h5><b>Skills Learned:</b></h5>
+								<ul style="font-size: 1.25rem">
+									<li>- Circuit Design</li>
+									<li>- PCB Design</li>
+									<li>- Script Development, Optimization, Integration</li>
+									<li>- Test Suite Development</li>
+									<li>- GUI and Front-End Development</li>
+									<li>- Data Serialization and JSON Usage</li>
+									<li>- I<sup>2</sup>C Communication</li>
+								</ul>
+								<h5><b>Languages Used:</b></h5>
+								<ul style="font-size: 1.25rem">
+									<li>- C#</li>
+									<li>- Python</li>
+									<li>- C++</li>
+								</ul>
+								<h5><b>Technical Resources Used:</b></h5>
+								<ul style="font-size: 1.25rem">
+									<li>- Google Flatbuffer Serialization</li>
+									<li>- Selenium web browser automation (in Python)</li>
+									<li>- EAGLE and easyeda PCB design software</li>
+								</ul>
+							</div>
+							<div id="coop-doble-desc" class="coop-doble-text col l8 grey lighten-3">
+								<h5><b>Position Held:</b> Hardware/Embedded Engineer</h5>
+								<p>I was based on the Computer Hardware team at Doble, and many of my tasks regarded one of Doble's products in their F series. I got to work hand-in-hand with the other engineers on the team, learning about realistic circuit design where the imperfections of the real world play a significant roll in how products are constructed. In addition, I worked heavily on improving and expanding several internal tools, both front-end and back-end. <br><br>I also spent some time on the embedded software team, where I helped design and implement some lower-level procedures involving data serialization and transmission. I really enjoyed being able to contribute to a project from both the software and hardware perspective. 
+								<br><br>Finally, I spent some time working on test scripts with the SQA department. The scripts, written in Python and using the Selenium browser automation package, confirmed proper website functionality through mock button presses, search queries, and other user interactions. This experience taught me how to write cohesive, comprehensive tests that cover all edge cases and ensure that a product is working correctly.
+								</p>
+							</div> 
+						</div>
 					</div>
 				</div>
 			</div>
@@ -375,16 +436,19 @@
 								class="secondary-content modal-trigger">
 								<i class="material-icons">arrow_forward</i></a></div></li>
 						<li class="collection-item">
-							<div>MIDI Drum Pad (a from-scratch, <b>Teensy</b>-powered drum pad!)<a href="#modal-drum" class="secondary-content modal-trigger">
+							<div>Hexdungeon (a game featuring a custom event loop, in <b>C++</b>)<a href="#modal-hexdungeon" class="secondary-content modal-trigger">
 								<i class="material-icons">arrow_forward</i></a></div></li>
 						<li class="collection-item">
+							<div>MIDI Drum Pad (a from-scratch, <b>Teensy</b>-powered drum pad!)<a href="#modal-drum" class="secondary-content modal-trigger">
+								<i class="material-icons">arrow_forward</i></a></div></li>
+						<!--<li class="collection-item">
 							<div>Darwin's Playground (a game, in <b>Java</b>)<a href="#modal-darwin" class="secondary-content modal-trigger">
 								<i class="material-icons">arrow_forward</i></a></div></li>
 						<li class="collection-item"> 
 							<div>C♭, an original programming language compiled with <b>Python</b><a href="#modal-cb"
 								class="secondary-content modal-trigger">
 								<i class="material-icons">arrow_forward</i></a></div></li>
-						<!-- <li class="collection-item">
+						<li class="collection-item">
 							<div>Haiku Generator (scripting in <b>Python</b>)<a href="#modal-haiku" class="secondary-content modal-trigger">
 								<i class="material-icons">arrow_forward</i></a></div></li>
 						<li class="collection-item">

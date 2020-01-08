@@ -1,4 +1,4 @@
-//All Javascript by Sam Paniccia (so much code smh). Using Google Materialize Design API. 
+//All Javascript by Sam Paniccia (all 50 lines of it :/). Using Google Materialize Design API. 
 
 
 //Should I show the work-in-progress screen, or should I show the real content? 
@@ -20,6 +20,7 @@ $(document).ready(function(){
 	$('#modal-event').modal();
 	$('#modal-site').modal();
 	$('#modal-drum').modal();
+	$('#modal-hexdungeon').modal();
 
 	//Determine which content to show/hide by isBuild flag
 	if (isBuild) { 
