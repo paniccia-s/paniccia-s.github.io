@@ -21,6 +21,7 @@ $(document).ready(function(){
 	$('#modal-site').modal();
 	$('#modal-drum').modal();
 	$('#modal-hexdungeon').modal();
+	$('#modal-ssh-backup').modal();
 
 	//Determine which content to show/hide by isBuild flag
 	if (isBuild) { 

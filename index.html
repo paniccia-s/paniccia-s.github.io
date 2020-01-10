@@ -120,6 +120,23 @@
 				</div>
 			</div>
 
+			<!-- Modal for Ssh-Backup -->
+			<div id="modal-ssh-backup" class="modal modal-fixed-footer blue-grey lighten-3">
+				<div class="modal-content center-align">
+					<h4>Ssh-Backup</h4>
+					<p><b>Ssh-Backup</b> is a Windows utility that I created to create a backup of my important files onto a remote device. It can connect to a device (currently Linux) on the local network and initiate an SSH connection to securely reproduce a directory tree onto the target. 
+					<br><br>This project has great potential. My original idea was to produce a version control-tracking backup client that could sync the remote file system regularly as changes are made to the files within it, but I was informed of the existence of <a href="https://linux.die.net/man/1/rsync">rsync</a>, which pretty much exactly matches the scope of this project. However, I do in fact use the backup utility to regularly back up my important documents to a Pi on my network, so this work was not entirely for naught.</p>
+					<br><br><b>Language:</b> C#
+					<br><br><b>Started:</b> June, 2019
+					<br><br><b>Why?</b> I was excited by a version control backup utility; I saw great value in such a tool. 
+					<br><br><b>Progress:</b> Full backup capability is present; connection is currently supported through SSH keys (password-only connection is not supported). The tool works and is reasonably quick!
+				</div>
+				<div class="modal-footer blue-grey lighten-3">
+					<a href="#!" class="modal-action modal-close btn-flat">Awesome!</a>
+					<a href="#!" class="modal-action modal-close btn-flat">Boo you, rsync!</a>
+				</div>
+			</div>
+
 			<!-- Modal for Drum Pad -->
 			<div id="modal-drum" class="modal modal-fixed-footer blue-grey lighten-3">
 				<div class="modal-content center-align">
@@ -201,7 +218,7 @@
 					<br><br><b>Language:</b> HTML, CSS, little bit of JS
 					<br><br><b>Started:</b> January, 2018
 					<br><br><b>Why?</b> I wanted a personal site and I figured I could use the practice in HTML/CSS. 
-					<br><br><b>Progress:</b> Up-To-Date as of 8 Jan 2019.
+					<br><br><b>Progress:</b> Up to date as of 9 Jan 2020.
 					</p>
 				</div>
 				<div class="modal-footer blue-grey lighten-3">
@@ -215,8 +232,8 @@
 			<!-- Projects Dropdown Menu -->
 			<ul id="projects-dropdown" class="dropdown-content">
 				<li><a href="#projects-jumpto">Overview</a></li> 
-				<li><a href="https://github.com/paniccia-s/hexdungeon">Hexdungeon Repo</a></li>
-				<li><a href="https://github.com/paniccia-s/ssh-backup">TODO SSH Backup Repo</a></li>  
+				<li><a href="https://github.com/paniccia-s/dungeon-game">Hexdungeon Repo</a></li>
+				<li><a href="https://github.com/paniccia-s/ssh-backup">SSH Backup Repo</a></li>  
 				<li><a href="https://github.com/paniccia-s/paniccia-s.github.io">Repo for this website!</a></li>
 			</ul>
 
@@ -425,6 +442,10 @@
 								class="secondary-content modal-trigger">
 								<i class="material-icons">arrow_forward</i></a></div></li>
 						<li class="collection-item">
+							<div>Ssh Backup (a directory remote backup utility, in <b>C# WPF</b>)<a href="#modal-ssh-backup"
+								class="secondary-content modal-trigger">
+								<i class="material-icons">arrow_forward</i></a></div></li>
+						<li class="collection-item">
 							<div>MIDI Drum Pad (a from-scratch, <b>Teensy</b>-powered drum pad!)<a href="#modal-drum" class="secondary-content modal-trigger">
 								<i class="material-icons">arrow_forward</i></a></div></li>
 						<!--<li class="collection-item">
@@ -463,7 +484,7 @@
 						<div class="row valign-wrapper">
 							<div id="khc-intro-text" class="col l5 offset-l1">
 								<h4>Kerr Hall Compositions is an independent composing organization co-founded by myself and 
-								<a href="https://joshuaberlin.me/">Joshua Berlin</a>.</h4>
+								<a href="https://joshuaberlin.com/">Joshua Berlin</a>.</h4>
 							</div>
 							<div id="khc-intro-pic" class="col l5 offset-l1 right">
 								<img src="assets/images/khc.jpg" class="hoverable responsive-img circle">
